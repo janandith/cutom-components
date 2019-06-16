@@ -1,0 +1,21 @@
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col" sortable="name" (sort)="onSort($event)">Country</th>
+    <th scope="col" sortable="area" (sort)="onSort($event)">Area</th>
+    <th scope="col" sortable="population" (sort)="onSort($event)">Population</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let entry of entries">
+    <th scope="row">{{ entry.id }}</th>
+    <td>
+      <img [src]="'https://upload.wikimedia.org/wikipedia/commons/' + country.flag" class="mr-2" style="width: 20px">
+      {{ entry.name }}
+    </td>
+    <td>{{ entry.username }}</td>
+    <td>{{ entry.eventDetails }}</td>
+  </tr>
+  </tbody>
+</table>
